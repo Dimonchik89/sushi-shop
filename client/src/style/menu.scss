@@ -1,0 +1,90 @@
+@import "./var.scss";
+@import "./mixin/mixin.scss";
+
+.menu {
+    background: $light-gray;
+    padding: 2.8rem 0 6.9rem;
+
+    .menu-header {
+        position: relative;
+
+        .menu-home__left-wrapper {
+            position: absolute;
+            top: 0;
+            left: 11%;
+            z-index: 2;
+            transform: translateY(-50%);
+
+            @include _834 {
+                transform: translateY(-25%);
+            }
+
+            .menu-home__left {
+                width: 7.1rem;
+                height: 6.5rem;
+
+                @include _834 {
+                    width: 3.1rem;
+                    height: 3.1rem;
+                }
+            }
+        }
+
+        .menu-home__right-wrapper {
+            position: absolute;
+            top: 0;
+            left: 18%;
+            z-index: 2;
+            transform: translateY(-25%);
+
+            @include _834 {
+                left: 16%;
+                transform: translateY(-75%);
+            }
+
+            .menu-home__right {
+                width: 4.8rem;
+                height: 4.4rem;
+
+                @include _834 {
+                    width: 3.8rem;
+                    height: 3.4rem;
+                }
+            }
+        }
+
+        .menu-sushi__icon-wrapper {
+            position: absolute;
+            top: 0;
+            right: 10%;
+            z-index: 2;
+
+            .menu-sushi__icon {
+                width: 6.6rem;
+                height: 5.5rem;
+
+                @include _834 {
+                    width: 4.2rem;
+                    height: 3.5rem;
+                }
+            }
+        }
+    }
+
+    .menu-button__title {
+        text-transform: capitalize;
+
+        &.MuiTypography-root {
+            font-size: 1.8rem;
+            font-weight: 700;
+
+            @include _834 {
+                font-size: 1.6rem;
+            }
+        }
+    }
+
+    .menu-contant {
+        margin-top: 7.3rem;
+    }
+}

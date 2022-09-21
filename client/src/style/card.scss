@@ -1,0 +1,54 @@
+@import "./mixin/mixin.scss";
+
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 54rem;
+    width: 30rem;
+}
+
+.card-img__wrapper {
+    text-align: center;
+    position: relative;
+
+    .card__img {
+        width: 30rem;
+        height: 30rem;
+        object-fit: contain;
+    }
+}
+
+.card-info {
+    margin-top: 3.6rem;
+}
+
+.card__title {
+
+    &.MuiTypography-root {
+        text-transform: capitalize;
+        font-size: 2.2rem;
+        font-weight: 800;
+
+        @include _834 {
+            font-size: 2rem;
+        }
+    }
+}
+
+.card-description {
+    flex: 1 1 0;
+}
+
+.card__text {
+    font-size: 1.4rem;
+    font-weight: 400;
+
+    &.MuiTypography-root {
+        font-size: 1.4rem;
+        font-weight: 400;
+    }
+}
+
+.card-button__wrapper {
+    margin-top: 2.5rem;
+}

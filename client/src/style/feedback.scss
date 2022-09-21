@@ -1,0 +1,21 @@
+@import "./var.scss";
+
+.feedback {
+    padding: 2.9rem 0;
+    background: $green;
+    cursor: pointer;
+
+    .feedback__icon {
+        width: 2.2rem;
+        height: 2.2rem;
+    }
+
+    .feedback__text {
+        margin-left: 1.9rem;
+
+        &.MuiTypography-root {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+    }
+}

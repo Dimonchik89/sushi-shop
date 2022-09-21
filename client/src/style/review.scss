@@ -1,0 +1,92 @@
+@import "./var.scss";
+@import "./mixin/mixin.scss";
+
+.review {
+    background: $gray;
+    padding-bottom: 7.4rem;
+    padding-top: 7.4rem;
+
+    @include _834 {
+        padding-top: 4rem;
+        padding-bottom: 4.9rem;
+    }
+
+    .review__title {
+        margin-bottom: 2.9rem;
+
+        @include _834 {
+            margin-bottom: 2.2rem;       
+        }
+
+        &.MuiTypography-root {
+            font-size: 2.2rem;
+            font-weight: 800;
+        }
+    }
+
+    .review__text {
+
+        &.MuiTypography-root {
+            font-size: 1.8rem;
+            font-weight: 400;
+            line-height: 3rem;
+
+            @include _834 {
+            }
+        }
+    }
+
+    .review-card {
+        padding: 5rem 0;
+        display: flex;
+        justify-content: center;
+
+        .review-card__inner {
+            width: 32.5rem;
+            height: 18.5rem;
+            position: relative;
+            border: 1px solid $green;
+            background: $white-dark;
+            border-radius: 3rem;
+
+            .review-info {
+                padding: 5rem 3.5rem 0;
+            }
+
+            .review__avatar {
+                width: 9rem;
+                height: 9rem;
+
+                position: absolute;
+                top: 0;
+                left: 50%;
+                z-index: 5;
+                transform: translate3d(-50%, -50%, 0);
+            }
+
+            .review-card__text {
+                font-size: 1.4rem;
+                font-weight: 400;
+                text-align: center;
+            }
+
+            .review-rating {
+                margin-top: 0.9rem;
+
+                .review-card__rating {
+
+                    &.MuiRating-root {
+                        color: $green;
+                        font-size: 2.5rem;
+                    }
+                }
+            }
+
+
+            .MuiRating-icon {
+                color: $green !important;
+            }
+        }
+    }
+
+}

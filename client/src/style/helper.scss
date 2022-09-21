@@ -1,0 +1,99 @@
+@import "./mixin/mixin.scss";
+
+.d-flex {
+    display: flex;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.justify-end {
+    justify-content: end;
+}
+
+.justify-start {
+    justify-content: start;
+}
+
+.d-column {
+    flex-direction: column;
+}
+
+.ml-12 {
+    margin-left: 1.2rem;
+}
+
+.fz-14 {
+    font-size: 1.4rem;
+}
+
+.fz-15 {
+    font-size: 1.5rem;
+}
+
+.fz-18 {
+    font-size: 1.8rem;
+}
+
+.fz-22 {
+    font-size: 2.2rem;
+}
+
+.fz-23 {
+    font-size: 2.3rem;
+}
+
+.fz-25 {
+    font-size: 2.5rem;
+}
+
+.fz-30 {
+    font-size: 3rem;
+}
+
+.fw-4 {
+    font-weight: 400;
+}
+
+.fw-5 {
+    font-weight: 500;
+}
+
+.fw-6 {
+    font-weight: 600;
+}
+
+.fw-7 {
+    font-weight: 700;
+}
+
+.fw-8 {
+    font-weight: 800;
+}
+
+.title {
+
+    &.MuiTypography-root {
+        font-size: 2.5rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        text-align: center;
+
+        @include _834 {
+            font-size: 2.3rem;
+        }
+    }
+}
+
+.text-center {
+    text-align: center;
+}

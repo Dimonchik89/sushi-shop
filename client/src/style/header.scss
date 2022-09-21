@@ -1,0 +1,189 @@
+@import "./var.scss";
+@import "../style/mixin/mixin.scss";
+
+.header-top {
+    padding: .4rem 0 .9rem;
+
+    .header-top__item {
+        position: relative;
+        display: flex;
+        justify-content: center;
+
+        &::after {
+            content: "";
+            height: 1.5rem;
+            border: 1px solid $light-black;
+            opacity: .4;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+        }
+
+        &:last-child:after {
+            display: none;
+        }
+
+        @include _834{
+            &:nth-child(1) {
+                justify-content: start;
+            }
+            &:nth-child(2) {
+                justify-content: center;
+            }
+            &:nth-child(3) {
+                justify-content: end;
+            }
+        }
+
+        & .header-top__inner {
+            display: flex;
+            align-items: center;
+        }
+
+        @include _834{
+            & .header-top__inner:nth-child(1) {
+                justify-content: start;
+            }
+            & .header-top__inner:nth-child(2) {
+                justify-content: center;
+            }
+            & .header-top__inner:nth-child(3) {
+                justify-content: end;
+            }
+        }
+
+        .header-top__icon {
+            width: 1.5rem;
+            height: 1.5rem;
+
+            @include _834 {
+                height: 1rem;
+                width: 1rem;
+            }
+        }
+
+        .header-top__text {
+
+            &.MuiTypography-root {
+                font-size: 1.4rem;
+                font-weight: 400;
+
+                @include _834 {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+.header-menu {
+    background-color: $light-gray;
+
+    // .header-menu__logo {
+
+    //     .header__logo {
+    //         width: 10.4rem;
+    //         height: 10.1rem;
+
+    //         @include _834 {
+    //             width: 5rem;
+    //             height: 5rem;
+    //         }
+    //     }
+
+    //     .header-menu__logo-title {
+    //         &.MuiTypography-root {
+    //             font-size: 2.3rem;
+    //             font-weight: 800;
+    
+    //             @include _834 {
+    //                 font-size: 1.5rem;
+    //                 font-weight: 700;
+    //             }
+    //         }
+
+    //     }
+
+    //     .header-menu__logo-subtitle {
+    //         &.MuiTypography-root  {
+    //             font-size: 1.5rem;
+    //             font-weight: 500;
+
+    //             @include _834 {
+    //                 font-size: 1.2rem;
+    //             }
+    //         }
+    //     }
+    // }
+
+    .header-menu__contact {
+
+        .header-contact__icon {
+            width: 1.7rem;
+            height: 1.7rem;
+
+            @include _834 {
+                width: 0.9rem;
+                height: 0.9rem;
+            }
+        }
+
+        .header-contact__text {
+
+            &.MuiTypography-root {
+                font-size: 1.4rem;
+                font-weight: 600;
+        
+                @include _834 {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+
+
+}
+
+.header-menu__links {
+    padding: 3.3rem 0;
+}
+
+.header-menu__logo {
+
+    .header__logo {
+        width: 10.4rem;
+        height: 10.1rem;
+
+        @include _834 {
+            width: 5rem;
+            height: 5rem;
+        }
+    }
+
+    .header-menu__logo-title {
+        &.MuiTypography-root {
+            font-size: 2.3rem;
+            font-weight: 800;
+
+            @include _834 {
+                font-size: 1.5rem;
+                font-weight: 700;
+                line-height: 1.8rem;
+            }
+        }
+
+    }
+
+    .header-menu__logo-subtitle {
+        &.MuiTypography-root  {
+            font-size: 1.5rem;
+            font-weight: 500;
+
+            @include _834 {
+                font-size: 1.2rem;
+                line-height: 1.4rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+@import "../style/mixin/mixin.scss";
+
+.preview {
+    background: url("../static/img/main.jpg");
+    background-size: cover;
+    background-position: 50% 50%;
+    height: 100%;
+    min-height: 42rem;
+    position: relative;
+
+    .preview__button {
+        text-transform: uppercase;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 5;
+        transform: translate3d(-50%, -50%, 0);
+
+        @include _834 {
+            display: none;
+        }
+    }
+}
