@@ -1,5 +1,5 @@
 {
-  "name": "db",
+  "name": "new_db",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,7 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "pg": "^8.8.0",
-    "sequelize": "^6.21.4",
+    "sequelize": "^6.23.0",
     "sequelize-cli": "^6.4.1"
   }
 }

@@ -1,15 +1,37 @@
-import { Box, Button, Modal, Typography } from "@mui/material";
+import { useEffect, useState } from "react";
+import { Box, Button, Modal, TextField, Typography } from "@mui/material";
 import { showModal, closeCart, product } from "../../store/cart";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { createStructuredSelector } from "reselect";
 import {cart} from "../../static/img/cart.js";
+import CartModalItem from "./CartModalItem";
+import useSumma from "../../hook/useSumma";
+import { usePostCartMutation } from "../../store/api/sushiApi";
 
+import "../../style/button.scss";
 import "../../style/cart.scss";
 
 const CartModal = ({ product, showModal, closeCart }) => {
+    const [email, setEmail] = useState("")
+    const {countSumma, summa} = useSumma();
+    const [postCart] = usePostCartMutation();
 
-    const content = cart;
+    useEffect(() => {
+        countSumma(product)
+    }, [product])
+
+    const content = product.length ? product?.map((item, i) => <CartModalItem key={i} product={item}/>) : cart;
+
+    const handleSend = async () => {
+        const products = product.map(item => ({id: item.id, name: item.name, qty: item.qty}))
+        const obj = {
+            date: new Date(),
+            email: email,
+            product: JSON.stringify(products)
+        }
+        await postCart(obj)
+    }
 
     return (
         <div>
@@ -20,14 +42,39 @@ const CartModal = ({ product, showModal, closeCart }) => {
                 disableAutoFocus={false}
             >
                 <Box className="cart-modal">
-                    
-                    <Typography id="modal-modal-title" variant="h6" component="h2">
-                        Text in a modal
-                    </Typography>
-                    <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                        Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-                    </Typography>
+                    {content}
+                    <Box>
+                        <Typography
+                            className="cart-modat__text"
+                            align="right"
+                        >
+                            {product.length ? `${summa}$` : null}
+                        </Typography>
+                    </Box>
+                    <Box
+                        className="align-center justify-center"
+                        sx={{display: product.length ? "flex" : "none", alignItems: "center", marginTop: "2rem"}}
+                    >
+                        <TextField
+                            className="cart-modat__input"
+                            placeholder="Your email"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                        />
+                        <Box
+                            sx={{marginLeft: "2rem"}}
+                        >
+                            <Button
+                                className="button__sm button__green"
+                                onClick={handleSend}
+                            >
+                                Buy
+                            </Button>
+                        </Box>
+
+                    </Box>
                 </Box>
+                
             </Modal>
         </div>
     )

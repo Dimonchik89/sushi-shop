@@ -29,9 +29,16 @@ const sushiApi = createApi({
                 method: "POST",
                 body: body
             })
+        }),
+        postCart: builder.mutation({
+            query: (body) => ({
+                url: "/cart",
+                method: "POST",
+                body: body
+            })
         })
     })
 })
 
-export const { useGetCategoryQuery, useGetSpecialQuery, useGetProductQuery, useLoginUserMutation } = sushiApi;
+export const { useGetCategoryQuery, useGetSpecialQuery, useGetProductQuery, useLoginUserMutation, usePostCartMutation } = sushiApi;
 export default sushiApi;

@@ -65,4 +65,46 @@
     box-shadow: 2.4rem;
     padding: 3rem;
     outline: none;
+
+    .cart-modat__input {
+        flex: 1 1 0;
+    }
+
+    .cart-modat__text {
+        font-size: 1.8rem;
+        font-weight: 400;
+    }
+
+    .cart-modal__item {
+        margin-bottom: 2rem;
+
+        .cart-modal__text-wrapper {
+            margin: 0 1.5rem;
+            flex: 1 1 0;
+        }
+    
+        .cart-modal__cost-wrapper {
+            margin: 0 1.5rem;
+        }
+
+        .cart-modal__img {
+            width: 10rem;
+            height: 10rem;
+            object-fit: cover;
+        }
+    
+        .cart-madal__qty {
+    
+            &.MuiTextField-root {
+                max-width: 5rem;
+            }
+        }
+    
+        .cart-modal__button {
+    
+            &.MuiIconButton-root:hover {
+                background: none;
+            }
+        }
+    }
 }

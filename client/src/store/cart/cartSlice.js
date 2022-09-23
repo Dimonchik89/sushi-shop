@@ -28,17 +28,23 @@ const cartSlice = createSlice({
             }
         },
         removeProduct: (state, action) => {
-            state.product = state.product.filter(item => item.id !== action.payload.id)
+            state.product = state.product.filter(item => item.id !== action.payload)
         },
         openCart: state => {
             state.showModal = true;
         },
         closeCart: state => {
             state.showModal = false;
+        },
+        addQty: (state, action) => {
+            state.product = state.product.map(item => item.id === action.payload ? {...item, qty: item.qty + 1} : item)
+        },
+        removeQty: (state, action) => {
+            state.product = state.product.map(item => item.id === action.payload ? {...item, qty: item.qty - 1} : item)
         }
     }
 })
 
 const { reducer, actions } = cartSlice;
-export const { addProduct, removeProduct, openCart, closeCart } = actions;
+export const { addProduct, removeProduct, openCart, closeCart, addQty, removeQty } = actions;
 export default reducer;

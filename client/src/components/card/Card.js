@@ -14,10 +14,6 @@ const Card = ({label = null, item, addProduct}) => {
         image = JSON.parse(item.img)[0]
     }
 
-    const handleAdd = () => {
-
-    }
-
     return (
         <Grid item xl={3} md={6} sm={12}>
             <Box
@@ -28,7 +24,7 @@ const Card = ({label = null, item, addProduct}) => {
                 >
                     <img 
                         className="card__img"
-                        src={`https://newtechshop.s3.eu-north-1.amazonaws.com/${image}`} 
+                        src={`${process.env.REACT_APP_IMAGE_PATH}${image}`} 
                         alt="photo"
                     />
                     {label}

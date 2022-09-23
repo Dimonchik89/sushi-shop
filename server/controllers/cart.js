@@ -1,21 +1,9 @@
 const { sequelize } = require("../../db/models/index");
 
 const addProductToCart = async (req, res) => {
-    // const { userId, deviceId } = req.body;
-    // const basket = await sequelize.models.basket.findOne({ where: { userId }})
-    // const basketDevice = await sequelize.models.basket_device.create({ basketId: basket.id, deviceId })
-    // return res.status(200).json(basketDevice)
-    let { products } = req.body;
-    products = JSON.parse(devices);
-    // devices.forEach(item => {
-    //     const basket = await sequelize.models.basket.findOne({ where: { userId: item.id }})
-    //     const basketDevice = await sequelize.models.basket_device.create({ basketId: basket.id, deviceId })
-    // })
-    for await (const item of products) {
-        const cart = await sequelize.models.cart.findOne({ where: { userId: item.id }})
-        const cartProduct = await sequelize.models.cart_product.create({ cartId: cart.id, productId: item.productId })
-    }
-    return res.status(200).json({ message: "The order has been processed"})
+    const { date, email, product } = req.body;
+    const cart = await sequelize.models.cart.create({ date: date, email: email, product: product})
+    return res.status(201).json(cart)
 }
 
 const getCartProduct = async (req, res) => {

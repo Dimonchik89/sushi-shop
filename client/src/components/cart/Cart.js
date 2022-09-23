@@ -5,17 +5,16 @@ import { product, openCart } from "../../store/cart";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 import { bindActionCreators } from "redux";
+import useSumma from "../../hook/useSumma";
 
 import "../../style/helper.scss";
 import "../../style/cart.scss";
 
 const Cart = ({product, openCart}) => {
-    const [summa, setSumma] = useState(0)
+    const {countSumma, summa} = useSumma();
 
     useEffect(() => {
-        product?.forEach(item => {
-            setSumma(summa => summa += item.cost * item.qty)
-        })
+        countSumma(product)
     }, [product])
 
     return (
@@ -41,7 +40,7 @@ const Cart = ({product, openCart}) => {
                     <Typography
                         className="cart__text"
                     >
-                        {summa}
+                        {`${summa}$`}
                     </Typography>
                 </Box>
             </Box>
