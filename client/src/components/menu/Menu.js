@@ -10,6 +10,7 @@ import { useSearchParams } from "react-router-dom";
 import { changeActiveMenu } from "../../store/activeMenu";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
+import Error from "../error/Error";
 
 import "../../style/helper.scss";
 import "../../style/button.scss";
@@ -25,7 +26,7 @@ const Menu = ({changeActiveMenu}) => {
     }, [searchParams.get("categoryId")])
 
     if(error) {
-        return <ErrorPage/>
+        return <Error/>
     }
 
     if(isLoading) {

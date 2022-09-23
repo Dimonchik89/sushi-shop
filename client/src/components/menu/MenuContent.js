@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import { Box, Grid } from "@mui/material";
 import Card from "../card/Card";
-import ErrorPage from "../../pages/ErrorPage";
 import Spinner from "../spinner/Spinner";
 import { useGetProductQuery } from "../../store/api/sushiApi";
 import { connect } from "react-redux";
@@ -21,9 +20,6 @@ const MenuContent = ({activeMenu}) => {
         // console.log(searchParams.get("categoryId"));
     }, [searchParams.get("categoryId")])
     
-    if(error) {
-        return <ErrorPage/>
-    }
     if(isLoading) {
         return <Spinner/>
     }

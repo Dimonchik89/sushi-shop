@@ -3,6 +3,7 @@ import Main from "./pages/Main";
 import Admin from './pages/Admin';
 import Login from './pages/Login';
 import ErrorPage from './pages/ErrorPage';
+import OrderPage from './pages/Order';
 import './App.scss';
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
         <Route path="/admin/*" element={<Admin/>}/>
         <Route path="/login" element={<Login/>}/>
         <Route path="*" element={<ErrorPage/>}/>
+        <Route path="/order" element={<OrderPage/>}/>
     </Routes>
   );
 }

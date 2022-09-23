@@ -1,8 +1,12 @@
 const { sequelize } = require("../../db/models/index");
+const sendMail = require("../mail/sendMail"); 
 
 const addProductToCart = async (req, res) => {
     const { date, email, product } = req.body;
     const cart = await sequelize.models.cart.create({ date: date, email: email, product: product})
+    await sendMail(email)
+        .then(result => console.log(result))
+        .catch(err => console.log(err))
     return res.status(201).json(cart)
 }
 
