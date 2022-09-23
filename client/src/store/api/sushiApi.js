@@ -1,4 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
+const token = localStorage.getItem("token");
 
 const sushiApi = createApi({
     reducerPath: "sushi",
@@ -23,6 +24,14 @@ const sushiApi = createApi({
                 }
             })
         }),
+        getAllOrder: builder.query({
+            query: () => ({
+                url: "/cart",
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                }
+            })
+        }),
         loginUser: builder.mutation({
             query: (body) => ({
                 url: "/user/login",
@@ -40,5 +49,5 @@ const sushiApi = createApi({
     })
 })
 
-export const { useGetCategoryQuery, useGetSpecialQuery, useGetProductQuery, useLoginUserMutation, usePostCartMutation } = sushiApi;
+export const { useGetCategoryQuery, useGetSpecialQuery, useGetProductQuery, useLoginUserMutation, usePostCartMutation, useGetAllOrderQuery } = sushiApi;
 export default sushiApi;

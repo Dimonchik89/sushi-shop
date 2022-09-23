@@ -16,11 +16,13 @@ const Review = () => {
     return (
         <Box className="review">
             <Container maxWidth="xl">
-                <Grid container spacing={{xl: 4, md: 0}}>
+                <Grid container spacing={{xl: 4, md: 0}} sx={{display: { xs: "none" }}}>
                     <Grid 
                         item 
                         xl={4}
                         md={12}
+                        sm={12}
+                        xs={12}
                         className="d-flex align-center"    
                     >
                         <Box>
@@ -36,7 +38,7 @@ const Review = () => {
                             </Typography>
                         </Box>
                     </Grid>
-                    <Grid item xl={8} md={12}>
+                    <Grid item xl={8} md={12} sm={12} xs={12}>
                         <Carousel slides={carouselArr}/>
                     </Grid>
                 </Grid>

@@ -12,17 +12,24 @@ const addProductToCart = async (req, res) => {
 
 const getCartProduct = async (req, res) => {
     const { id } = req.params;
-    const cart = await sequelize.models.cart.findOne({where: { userId: id }})
-    const product = await sequelize.models.cart_product.findAll({ where: { carttId: cart.id }})
-    return res.status(200).json(product)
+    const cart = await sequelize.models.cart.findOne({where: { id: id }})
+    return res.status(200).json(cart)
+}
+
+const getAllCartProduct = async (req, res) => {
+    const allOrder = await sequelize.models.cart.findAndCountAll()
+    return res.status(200).json(allOrder)
 }
 
 const deleteProduct = async (req, res) => {
-    const { userId, productId } = req.body;
-    return res.json({ user: userId, product: productId })
+    const { id } = req.params;
+    const cart = await sequelize.models.cart.destroy({where: { id }})
+    return res.status(200).json(cart)
 }
 
 module.exports = {
     addProductToCart,
     getCartProduct,
+    getAllCartProduct,
+    deleteProduct
 }

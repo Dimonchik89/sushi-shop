@@ -18,13 +18,17 @@
             top: 50%;
             right: 0;
             transform: translateY(-50%);
+
+            @include _834 {
+                display: none;
+            }
         }
 
         &:last-child:after {
             display: none;
         }
 
-        @include _834{
+        @include _1170{
             &:nth-child(1) {
                 justify-content: start;
             }
@@ -36,12 +40,26 @@
             }
         }
 
+        @include _834{
+            &:nth-child(1) {
+                justify-content: center;
+            }
+            &:nth-child(2) {
+                justify-content: center;
+            }
+            &:nth-child(3) {
+                justify-content: center;
+            }
+        }
+
+        
+
         & .header-top__inner {
             display: flex;
             align-items: center;
         }
 
-        @include _834{
+        @include _1170{
             & .header-top__inner:nth-child(1) {
                 justify-content: start;
             }

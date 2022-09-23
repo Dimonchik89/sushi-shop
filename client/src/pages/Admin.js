@@ -9,6 +9,7 @@ import AdminProductList from "../components/admin/AdminProductList";
 import AdminProductCreate from "../components/admin/AdminProductCreate";
 import AdminCategoryList from "../components/admin/AdminCategoryList";
 import AdminProductEdit from "../components/admin/AdminProductEdit";
+import AdminOrderList from "../components/admin/AdminOrderList";
 
 import { Admin as AdminComponent, Resource, fetchUtils } from 'react-admin';
 import jsonServerProvider from 'ra-data-json-server';
@@ -79,6 +80,7 @@ const Admin = () => {
             <AdminComponent dataProvider={myDataProfider} basename="/admin">
                 <Resource name="category" list={AdminCategoryList} create={AdminCreateType} edit={AdminEditType}/>
                 <Resource name="product" list={AdminProductList} create={AdminProductCreate} edit={AdminProductEdit}/>
+                <Resource name="cart" list={AdminOrderList}/>
             </AdminComponent>
         </Box>
             

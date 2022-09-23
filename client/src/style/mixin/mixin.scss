@@ -8,8 +8,8 @@
         @content;
     }
 }
-@mixin _768 {
-    @media (max-width: 768px){
+@mixin _600_834 {
+    @media (min-width: 833px){
         @content;
     }
 }

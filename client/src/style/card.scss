@@ -5,11 +5,20 @@
     flex-direction: column;
     height: 54rem;
     width: 30rem;
+
+    @include _834 {
+        margin: 0 auto 2rem;
+    }
 }
 
 .card-img__wrapper {
     text-align: center;
     position: relative;
+
+    @include _834 {
+        display: flex;
+        justify-content: center;
+    }
 
     .card__img {
         width: 30rem;

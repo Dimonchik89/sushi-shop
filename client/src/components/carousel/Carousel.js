@@ -15,8 +15,6 @@ const Carousel = ({slides}) => {
         arrows: false
       };
 
-      console.log();
-
     return (
         <Slider {...settings}>
             {slides}
