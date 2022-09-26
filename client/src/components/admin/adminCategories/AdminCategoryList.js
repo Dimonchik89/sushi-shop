@@ -1,7 +1,6 @@
 import React from "react";
 import { List, Datagrid, DateField, TextField, EditButton } from 'react-admin';
 import BookIcon from '@mui/icons-material/Book';
-export const PostIcon = BookIcon;
 
 const AdminCategoryList = () => {
 

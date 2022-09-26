@@ -10,8 +10,8 @@ const About = () => {
     return (
         <Box className="about">
             <Container maxWidth="xl">
-                <Grid container columnSpacing={{xl: 11, md: 0}} rowSpacing={{xl: 0, md: 2}}>
-                    <Grid item xl={6} md={12} className="about-container__img">
+                <Grid container columnSpacing={{xl: 11,lg: 0}} rowSpacing={{xl: 0, lg: 2}}>
+                    <Grid item xl={6} lg={12} className="about-container__img">
                         <Box className="about-img__wrapper">
                             <img 
                                 className="about__img"
@@ -20,7 +20,7 @@ const About = () => {
                             />
                         </Box>
                     </Grid>
-                    <Grid item xl={6} md={12} className="about-container__text">
+                    <Grid item xl={6} lg={12} className="about-container__text">
                         <AboutInfo/>
                     </Grid>
                 </Grid>

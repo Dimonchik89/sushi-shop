@@ -12,14 +12,14 @@ const Footer = () => {
     return (
         <Box className="footer">
             <Container maxWidth="xl">
-                <Grid container spacing={{xl: 2, md: 0}} >
-                    <Grid item xl={4} md={4}>
+                <Grid container spacing={{xl: 2, lg: 0}} >
+                    <Grid item xl={4} lg={4} md={4}>
                         <HeaderMenuLogo/>
                     </Grid> 
-                    <Grid item xl={4} md={8} className="d-flex align-center">
+                    <Grid item xl={4} lg={8} md={8} className="d-flex align-center">
                         <FooterContact title="Call Back" phone="+1 703-697-1776"/>
                     </Grid>
-                    <Grid item xl={4} md={0} className="d-flex align-center justify-end footer-social__wrapepr">
+                    <Grid item xl={4} lg={0} className="d-flex align-center justify-end footer-social__wrapepr">
                         <FooterSocial/>
                     </Grid>
                 </Grid>

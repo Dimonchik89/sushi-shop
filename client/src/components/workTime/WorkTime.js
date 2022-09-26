@@ -28,7 +28,7 @@ const WorkTime = () => {
                             </Typography>
                         </Box>
 
-                        <Box className="work-tine__schedule">
+                        <Box className="work-time__schedule">
                             <WorkTimeSchedule title="Week Days" time="9:30 am - 9:00 pm"/>
                             <WorkTimeSchedule title="Saturday" time="9:00 am - 10:00 pm"/>
                             <WorkTimeSchedule title="Sunday" time="8:30 am - 10:00 pm"/>

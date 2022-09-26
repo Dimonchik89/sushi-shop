@@ -8,11 +8,7 @@
         @content;
     }
 }
-@mixin _600_834 {
-    @media (min-width: 833px){
-        @content;
-    }
-}
+
 @mixin _600 {
     @media (max-width: 600px){
         @content;
@@ -23,8 +19,8 @@
         @content;
     }
 }
-@mixin _350{
-    @media (max-width: 350px){
+@mixin _320{
+    @media (max-width: 320px){
         @content;
     }
 }

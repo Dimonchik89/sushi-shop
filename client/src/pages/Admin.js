@@ -3,13 +3,13 @@ import { Box } from "@mui/material";
 import { Navigate } from "react-router-dom";
 import jwt_decode from "jwt-decode";
 
-import AdminCreateType from "../components/admin/AdminCreateType";
-import AdminEditType from "../components/admin/AdminEditType";
-import AdminProductList from "../components/admin/AdminProductList";
-import AdminProductCreate from "../components/admin/AdminProductCreate";
-import AdminCategoryList from "../components/admin/AdminCategoryList";
-import AdminProductEdit from "../components/admin/AdminProductEdit";
-import AdminOrderList from "../components/admin/AdminOrderList";
+import AdminCreateType from "../components/admin/adminCategories/AdminCreateType";
+import AdminEditType from "../components/admin/adminCategories/AdminEditType";
+import AdminProductList from "../components/admin/adminProduct/AdminProductList";
+import AdminProductCreate from "../components/admin/adminProduct/AdminProductCreate";
+import AdminCategoryList from "../components/admin/adminCategories/AdminCategoryList";
+import AdminProductEdit from "../components/admin/adminProduct/AdminProductEdit";
+import AdminOrderList from "../components/admin/adminOrder/AdminOrderList";
 
 import { Admin as AdminComponent, Resource, fetchUtils } from 'react-admin';
 import jsonServerProvider from 'ra-data-json-server';
@@ -88,12 +88,4 @@ const Admin = () => {
     )
 }
 
-// const mapDispatchToProps = (dispatch) => ({
-//     fetchTypes: bindActionCreators(fetchTypes, dispatch),
-//     fetchCategory: bindActionCreators(fetchCategory, dispatch)
-// })
-
-// const connector = connect(null, mapDispatchToProps)
-
-// export default connector(Admin);
 export default Admin;

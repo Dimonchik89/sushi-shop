@@ -1,12 +1,9 @@
 const { sequelize } = require("../../db/models/index");
-const sendMail = require("../mail/sendMail"); 
+const sendMail = require("../mail/sendMail");
 
 const addProductToCart = async (req, res) => {
     const { date, email, product } = req.body;
     const cart = await sequelize.models.cart.create({ date: date, email: email, product: product})
-    await sendMail(email)
-        .then(result => console.log(result))
-        .catch(err => console.log(err))
     return res.status(201).json(cart)
 }
 
@@ -27,9 +24,32 @@ const deleteProduct = async (req, res) => {
     return res.status(200).json(cart)
 }
 
+const acceptOrder = async (req, res) => {
+    const { email, title, text } = req.body;
+    await sendMail(email, title, text);
+    return res.status(200).json({message: "Mail send"})
+}
+
+const sendOrder = async (req, res) => {
+    const { id, email, title, text } = req.body;
+    await sendMail(email, title, text);
+    const delOrder = await sequelize.models.cart.destroy({where: { id }});
+    return res.status(200).json({ message: "Order send and delete from table"})
+}
+
+const errorOrder = async (req, res) => {
+    const { id, email, title, text } = req.body;
+    await sendMail(email, title, text)
+    const delOrder = await sequelize.models.cart.destroy({where: { id }})
+    return res.status(200).json({ message: "Error, can't send order. Order delerte from table"})
+}
+
 module.exports = {
     addProductToCart,
     getCartProduct,
     getAllCartProduct,
-    deleteProduct
+    deleteProduct,
+    acceptOrder,
+    sendOrder,
+    errorOrder
 }

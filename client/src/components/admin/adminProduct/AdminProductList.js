@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Datagrid, EditButton, List, NumberField, TextField } from "react-admin";
-
+import { useRecordContext } from 'react-admin';
+import AdminProductImage from "./AdminProductImage";
 
 const AdminProductList= () => {
 
@@ -13,7 +14,8 @@ const AdminProductList= () => {
                 <TextField source="weight"/>
                 <TextField source="components"/>
                 <TextField source="categoryId"/>
-                <TextField source="img"/>
+                {/* <TextField source="img"/> */}
+                <AdminProductImage/>
                 <EditButton />
             </Datagrid>
         </List>

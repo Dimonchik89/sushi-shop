@@ -9,7 +9,7 @@ const MenuButtonBlock = ({categories}) => {
     const content = categories?.map((item, i) => <MenuButton key={i} item={item}/>)
 
     return (
-        <Container maxWidth="md">
+        <Container maxWidth="lg">
             <Box
                 className="d-flex justify-center"
                 sx={{flexWrap: "wrap", marginTop: "2rem"}}

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { Box, Button, Modal, TextField, Typography } from "@mui/material";
-import { showModal, closeCart, product } from "../../store/cart";
+import { Box, Modal, Typography } from "@mui/material";
+import { showModal, closeCart, product, clearProduct } from "../../store/cart";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { createStructuredSelector } from "reselect";
@@ -8,14 +8,15 @@ import {cart} from "../../static/img/cart.js";
 import CartModalItem from "./CartModalItem";
 import useSumma from "../../hook/useSumma";
 import { usePostCartMutation } from "../../store/api/sushiApi";
+import CartModalBuy from "./CartModalBuy";
 
 import "../../style/button.scss";
 import "../../style/cart.scss";
 
-const CartModal = ({ product, showModal, closeCart }) => {
+const CartModal = ({ product, showModal, closeCart, clearProduct, handleOpen }) => {
     const [email, setEmail] = useState("")
     const {countSumma, summa} = useSumma();
-    const [postCart] = usePostCartMutation();
+    const [postCart, { isLoading }] = usePostCartMutation();
 
     useEffect(() => {
         countSumma(product)
@@ -31,6 +32,17 @@ const CartModal = ({ product, showModal, closeCart }) => {
             product: JSON.stringify(products)
         }
         await postCart(obj)
+
+        if(!isLoading) {
+            closeCart()
+            clearProduct()
+            setEmail("")
+            handleOpen()
+        }
+    }
+
+    const handleChangeMail = (e) => {
+        setEmail(e.target.value)
     }
 
     return (
@@ -51,30 +63,8 @@ const CartModal = ({ product, showModal, closeCart }) => {
                             {product.length ? `${summa}$` : null}
                         </Typography>
                     </Box>
-                    <Box
-                        className="align-center justify-center"
-                        sx={{display: product.length ? "flex" : "none", alignItems: "center", marginTop: "2rem"}}
-                    >
-                        <TextField
-                            className="cart-modat__input"
-                            placeholder="Your email"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                        />
-                        <Box
-                            sx={{marginLeft: "2rem"}}
-                        >
-                            <Button
-                                className="button__sm button__green"
-                                onClick={handleSend}
-                            >
-                                Buy
-                            </Button>
-                        </Box>
-
-                    </Box>
+                    <CartModalBuy product={product} handleSend={handleSend} email={email} handleChangeMail={handleChangeMail}/>
                 </Box>
-                
             </Modal>
         </div>
     )
@@ -87,6 +77,7 @@ const mapStateToProps = createStructuredSelector({
 
 const mapDispatchToProps = dispatch => ({
     closeCart: bindActionCreators(closeCart, dispatch),
+    clearProduct: bindActionCreators(clearProduct, dispatch)
 })
 
 const connector = connect(mapStateToProps, mapDispatchToProps);

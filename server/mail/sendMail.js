@@ -2,7 +2,7 @@ const nodemailer = require("nodemailer");
 const { google } = require("googleapis");
 
 
-const sendMail = async (email) => {
+const sendMail = async (email, title, text) => {
     const CLIENT_EMAIL = process.env.CLIENT_EMAIL;
     const CLIENT_ID = process.env.CLIENT_ID;
     const CLIENT_SECRET = process.env.CLIENT_SECRET;
@@ -35,8 +35,8 @@ const sendMail = async (email) => {
         const mailOptions = {
             from: `FRONT <${CLIENT_EMAIL}>`,
             to: email,
-            subject: `Your order is accepted`,
-            html: `Enjoy learning!`,
+            subject: `${title}`,
+            html: `${text}`,
         }
 
         const result = await transport.sendMail(mailOptions)

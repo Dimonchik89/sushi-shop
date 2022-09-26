@@ -7,7 +7,7 @@ const WorkTimeSchedule = ({title, time}) => {
 
     return (
         <Box 
-            className="d-flex space-between work-tine__schedule-item"
+            className="d-flex space-between work-time__schedule-item"
         >
             <Typography>
                 {title}

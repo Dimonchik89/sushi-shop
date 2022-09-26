@@ -1,6 +1,6 @@
 import React from "react";
 import { AutocompleteInput, Create, SimpleForm, TextInput, FileInput, ImageField, EditButton } from "react-admin";
-import { useGetCategoryQuery } from "../../store/api/sushiApi";
+import { useGetCategoryQuery } from "../../../store/api/sushiApi";
 
 const AdminProductCreate = (props) => {
     const { data } = useGetCategoryQuery();

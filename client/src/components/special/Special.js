@@ -35,8 +35,8 @@ const Special = () => {
                 <Box className="special-card__wrapper">
                     <Grid 
                         container 
-                        // spacing={{xl: 11, md: 20}}
-                        rowSpacing={{md: 10}}
+                        // spacing={{xl: 11, lg: 20}}
+                        rowSpacing={{lg: 10}}
                     >
                         {content}
                     </Grid>

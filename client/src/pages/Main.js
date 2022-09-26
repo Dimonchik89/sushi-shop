@@ -9,11 +9,12 @@ import Feedback from "../components/feedback/Feedback";
 import Footer from "../components/footer/Footer";
 import CartModal from "../components/cart/CartModal";
 import { Box } from "@mui/material";
-import ErrorPage from "./ErrorPage";
-import { useGetCategoryQuery, useGetSpecialQuery } from "../store/api/sushiApi";
+import CartStack from "../components/cart/CartStack";
+import useHandleChangeWindow from "../hook/useHandleChangeWindow"; 
+import { useNavigate } from "react-router-dom";
 
 const Main = () => {
-    
+    const { open, handleOpen, handleClose } = useHandleChangeWindow();
 
     return (
         <Box sx={{position: "relative"}}>
@@ -26,7 +27,14 @@ const Main = () => {
             <Review/>
             <Feedback/>
             <Footer/>
-            <CartModal/>
+            <CartModal handleOpen={handleOpen}/>
+            <CartStack open={open} handleClose={handleClose}/>
+            <a
+                href="http://admin.localhost:3000/login"
+                target="_blank"
+            >
+                Admin
+            </a>
         </Box>
     )
 }

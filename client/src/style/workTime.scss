@@ -40,14 +40,18 @@
                 }
             }
 
-            .work-tine__schedule {
+            .work-time__schedule {
                 width: 100%;
 
                 @include _834 {
                     width: 50.7rem;
                 }
 
-                .work-tine__schedule-item {
+                @include _480 {
+                    width: 100%;
+                }
+
+                .work-time__schedule-item {
                     padding: 1rem;
                     border-bottom: 2px dashed $orange;
                 }
