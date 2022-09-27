@@ -13,15 +13,21 @@
         }
 
         .footer__title-wrapper {
+            text-align: center;
 
             @include _834 {
                 order: 2;
                 width: 50%;
+                text-align: end;
             }
 
             .footer__title {
                 font-size: 2.2rem;
                 font-weight: 800;
+
+                @include _600 {
+                    font-size: 1.8rem;
+                }
             }
         }
 
@@ -47,6 +53,10 @@
                     color: $dark-black;
                     font-size: 1.8rem;
                     font-weight: 700;
+                }
+
+                @include _600 {
+                    font-size: 1.4rem;
                 }
             }
         }

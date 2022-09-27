@@ -20,10 +20,9 @@ const HeaderMenuLogo = () => {
                         Sushi-sempai
                     </Typography>
                     <Typography
-                        variant="subtitle2"
-                        component="span"
+                        className="header-menu__logo-subtitle"
                     >
-                        Asian food delivery
+                        asian food delivery
                     </Typography>
                 </Box>
             </Box>

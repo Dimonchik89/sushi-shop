@@ -19,9 +19,6 @@
             right: 0;
             transform: translateY(-50%);
 
-            @include _834 {
-                display: none;
-            }
         }
 
         &:last-child:after {
@@ -98,43 +95,6 @@
 .header-menu {
     background-color: $light-gray;
 
-    // .header-menu__logo {
-
-    //     .header__logo {
-    //         width: 10.4rem;
-    //         height: 10.1rem;
-
-    //         @include _834 {
-    //             width: 5rem;
-    //             height: 5rem;
-    //         }
-    //     }
-
-    //     .header-menu__logo-title {
-    //         &.MuiTypography-root {
-    //             font-size: 2.3rem;
-    //             font-weight: 800;
-    
-    //             @include _834 {
-    //                 font-size: 1.5rem;
-    //                 font-weight: 700;
-    //             }
-    //         }
-
-    //     }
-
-    //     .header-menu__logo-subtitle {
-    //         &.MuiTypography-root  {
-    //             font-size: 1.5rem;
-    //             font-weight: 500;
-
-    //             @include _834 {
-    //                 font-size: 1.2rem;
-    //             }
-    //         }
-    //     }
-    // }
-
     .header-menu__contact {
 
         .header-contact__icon {
@@ -142,8 +102,8 @@
             height: 1.7rem;
 
             @include _834 {
-                width: 0.9rem;
-                height: 0.9rem;
+                width: 1.3rem;
+                height: 1.3rem;
             }
         }
 
@@ -153,9 +113,7 @@
                 font-size: 1.4rem;
                 font-weight: 600;
         
-                @include _834 {
-                    font-size: 1rem;
-                }
+                
             }
         }
     }
@@ -165,6 +123,20 @@
 
 .header-menu__links {
     padding: 3.3rem 0;
+
+    .button-header__menu.button__lg {
+        font-size: 1.8rem;
+        font-weight: 700;
+
+        @include _834 {
+            font-size: 1.6rem;
+            font-weight: 700;
+
+            &:nth-child(2) {
+                display: none;
+            }
+        }
+    }
 }
 
 .header-menu__logo {
@@ -174,8 +146,8 @@
         height: 10.1rem;
 
         @include _834 {
-            width: 5rem;
-            height: 5rem;
+            width: 8.7rem;
+            height: 8.5rem;
         }
     }
 
@@ -185,7 +157,7 @@
             font-weight: 800;
 
             @include _834 {
-                font-size: 1.5rem;
+                font-size: 2.1rem;
                 font-weight: 700;
                 line-height: 1.8rem;
             }
@@ -199,7 +171,7 @@
             font-weight: 500;
 
             @include _834 {
-                font-size: 1.2rem;
+                font-size: 1.3rem;
                 line-height: 1.4rem;
             }
         }

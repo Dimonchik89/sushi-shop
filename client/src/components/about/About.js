@@ -9,8 +9,13 @@ const About = () => {
 
     return (
         <Box className="about">
-            <Container maxWidth="xl">
-                <Grid container columnSpacing={{xl: 11,lg: 0}} rowSpacing={{xl: 0, lg: 2}}>
+            <Container sx={{maxWidth: { xl: "xl", lg: "lg" }}} >
+                <Grid 
+                    container 
+                    columnSpacing={{xl: 11, lg: 0}} 
+                    rowSpacing={{xl: 0, lg: 2}} 
+                    className="container-wrapper"
+                >
                     <Grid item xl={6} lg={12} className="about-container__img">
                         <Box className="about-img__wrapper">
                             <img 

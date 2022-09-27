@@ -28,7 +28,7 @@ const MenuContent = ({activeMenu}) => {
     
     return (
         <Box className="menu-contant">
-            <Grid container spacing={{ xl: 11, lg: 20}}>
+            <Grid container rowSpacing={{xl: 11, lg: 8}}>
                 {content}
             </Grid>
         </Box>

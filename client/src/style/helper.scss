@@ -50,3 +50,11 @@
 .text-center {
     text-align: center;
 }
+
+.container-wrapper {
+    padding: 0 4.1rem;
+
+    @include _834 {
+        padding: 0 2.3rem;
+    }
+}

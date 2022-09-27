@@ -12,7 +12,7 @@ const FooterContact = ({title, phone}) => {
         >   
             <Box 
                 className="footer__title-wrapper"
-            sx={{width: { lg: "50%" }, textAlign: "center"}}>
+            >
                 <Typography
                     className="footer__title"
                 >

@@ -12,7 +12,11 @@ const Footer = () => {
     return (
         <Box className="footer">
             <Container maxWidth="xl">
-                <Grid container spacing={{xl: 2, lg: 0}} >
+                <Grid 
+                    container 
+                    spacing={{xl: 2, lg: 0}} 
+                    className="container-wrapper"    
+                >
                     <Grid item xl={4} lg={4} md={4}>
                         <HeaderMenuLogo/>
                     </Grid> 

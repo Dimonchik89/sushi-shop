@@ -11,7 +11,7 @@ const HeaderMenuContact = () => {
         <Box className="header-menu__contact">
             <Box>
                 <Box 
-                    className="d-flex justify-end"
+                    className="d-flex justify-end align-center"
                     sx={{marginBottom: { xl: "2.1rem", lg: ".7rem"}}}
                 >
                     <Typography
@@ -30,7 +30,7 @@ const HeaderMenuContact = () => {
                     </Box>
                 </Box>
 
-                <Box className="d-flex justify-end">
+                <Box className="d-flex justify-end align-center">
                     <Typography
                         className="header-contact__text"
                     >

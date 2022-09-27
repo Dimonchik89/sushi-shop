@@ -2,8 +2,9 @@ import { Box, Button } from "@mui/material";
 import { headerMenuLinks } from "../../links/links";
 import { useNavigate } from "react-router-dom";
 
-import "../../style/header.scss";
+
 import "../../style/button.scss";
+import "../../style/header.scss";
 
 const HeaderMenuLinks = () => {
     const navigate = useNavigate();

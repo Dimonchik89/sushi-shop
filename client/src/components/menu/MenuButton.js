@@ -16,7 +16,7 @@ const MenuButton = ({item, changeActiveMenu, activeMenu}) => {
     const buttonStyle = activeMenu == item.id ? "button__md button-border__orange active" : "button__md button-border__orange"
 
     return (
-        <Box className="button-menu__wrapper">
+        <Box className="button-menu__wrapper  menu-button__wrapper">
             <Button
                 className={buttonStyle}
                 onClick={() => {

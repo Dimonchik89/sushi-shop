@@ -2,7 +2,7 @@
 @import "./mixin/mixin.scss";
 
 .special {
-    padding: 5.6rem 0 7.3rem;
+    padding: 5.6rem 0 7rem;
     background: $gray;
 
     @include _834 {
@@ -13,7 +13,8 @@
         margin-top: 5.7rem;
 
         @include _834 {
-            padding-top: 2.3rem;
+            padding-top: 2.2rem;
+            margin: 0;
         }
     }
 }

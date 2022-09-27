@@ -8,6 +8,12 @@
     min-height: 42rem;
     position: relative;
 
+    @include _834 {
+        background: url("../static/img/main_834.png");
+        height: 100%;
+        min-height: 40rem;
+    }
+
     .preview__button {
         text-transform: uppercase;
         position: absolute;
@@ -17,7 +23,7 @@
         transform: translate3d(-50%, -50%, 0);
 
         @include _834 {
-            display: none;
+            
         }
     }
 }

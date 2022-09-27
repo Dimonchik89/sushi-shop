@@ -5,6 +5,10 @@
     background: $light-gray;
     padding: 2.8rem 0 6.9rem;
 
+    @include _834 {
+        padding: 2.4rem 0 3.5rem;
+    }
+
     .menu-header {
         position: relative;
 
@@ -17,6 +21,7 @@
 
             @include _834 {
                 transform: translateY(-25%);
+                left: 18%;
             }
 
             .menu-home__left {
@@ -38,7 +43,7 @@
             transform: translateY(-25%);
 
             @include _834 {
-                left: 16%;
+                left: 24%;
                 transform: translateY(-75%);
             }
 
@@ -59,6 +64,10 @@
             right: 10%;
             z-index: 2;
 
+            @include _834 {
+                right: 18%;
+            }
+
             .menu-sushi__icon {
                 width: 6.6rem;
                 height: 5.5rem;
@@ -71,20 +80,40 @@
         }
     }
 
-    .menu-button__title {
-        text-transform: capitalize;
+    .menu-button__block {
+        flex-wrap: wrap;
+        margin-top: 2rem;
 
-        &.MuiTypography-root {
-            font-size: 1.8rem;
-            font-weight: 700;
+        @include _834 {
+            margin-top: 1.5rem;
+        }
 
-            @include _834 {
-                font-size: 1.6rem;
+        .menu-button__wrapper {
+            display: flex;
+            justify-content: center;
+
+            .menu-button__title {
+                text-transform: capitalize;
+        
+                &.MuiTypography-root {
+                    font-size: 1.8rem;
+                    font-weight: 700;
+        
+                    @include _834 {
+                        font-size: 1.6rem;
+                    }
+                }
             }
         }
     }
 
+
+
     .menu-contant {
         margin-top: 7.3rem;
+
+        @include _834 {
+            margin-top: 6.5rem;
+        }
     }
 }

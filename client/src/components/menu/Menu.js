@@ -35,7 +35,7 @@ const Menu = ({changeActiveMenu}) => {
 
     return (
         <Box className="menu">
-            <Container maxWidth="xl">
+            <Container maxWidth="xl" className="d-flex d-column">
                 <MenuHeader/>
                 <MenuButtonBlock categories={data}/>
                 <MenuContent/>

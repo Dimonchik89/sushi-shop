@@ -33,15 +33,15 @@ const acceptOrder = async (req, res) => {
 const sendOrder = async (req, res) => {
     const { id, email, title, text } = req.body;
     await sendMail(email, title, text);
-    const delOrder = await sequelize.models.cart.destroy({where: { id }});
-    return res.status(200).json({ message: "Order send and delete from table"})
+    // const delOrder = await sequelize.models.cart.destroy({where: { id }});
+    return res.status(200).json({ message: "Order send"})
 }
 
 const errorOrder = async (req, res) => {
     const { id, email, title, text } = req.body;
     await sendMail(email, title, text)
-    const delOrder = await sequelize.models.cart.destroy({where: { id }})
-    return res.status(200).json({ message: "Error, can't send order. Order delerte from table"})
+    // const delOrder = await sequelize.models.cart.destroy({where: { id }})
+    return res.status(200).json({ message: "Error, can't send order"})
 }
 
 module.exports = {
