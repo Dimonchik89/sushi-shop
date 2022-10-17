@@ -35,6 +35,10 @@
                     color: $white;
                     text-transform: uppercase;
                     text-align: center;
+
+                    @include _600 {
+                        font-size: 2.1rem;
+                    }
                 }
     
                 .work-time__subtitle {
@@ -42,6 +46,10 @@
                     font-weight: 700;
                     color: $orange;
                     text-align: center;
+
+                    @include _600 {
+                        font-size: 1.6rem;
+                    }
                 }
             }
 

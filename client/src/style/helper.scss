@@ -44,6 +44,10 @@
         @include _834 {
             font-size: 2.3rem;
         }
+
+        @include _600 {
+            font-size: 2.1rem;
+        }
     }
 }
 

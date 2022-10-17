@@ -18,6 +18,10 @@
             margin-bottom: 2.2rem;       
         }
 
+        @include _600 {
+            font-size: 2.1rem;
+        }
+
         &.MuiTypography-root {
             font-size: 2.2rem;
             font-weight: 800;
@@ -31,7 +35,9 @@
             font-weight: 400;
             line-height: 3rem;
 
-            @include _834 {
+            @include _600 {
+                font-size: 1.6rem;
+                line-height: 2.2rem;
             }
         }
     }
@@ -41,6 +47,10 @@
         display: flex;
         justify-content: center;
 
+        @include _600 {
+            padding: 5rem 0 2rem;
+        }
+
         .review-card__inner {
             width: 32.5rem;
             height: 18.5rem;
@@ -49,8 +59,17 @@
             background: $white-dark;
             border-radius: 3rem;
 
+            @include _600 {
+                width: 22.8rem;
+                height: 13rem;
+            }
+
             .review-info {
                 padding: 5rem 3.5rem 0;
+
+                @include _600 {
+                    padding: 4rem 2rem 0;
+                }
             }
 
             .review__avatar {
@@ -62,12 +81,21 @@
                 left: 50%;
                 z-index: 5;
                 transform: translate3d(-50%, -50%, 0);
+
+                @include _600 {
+                    width: 6rem;
+                    height: 6rem;
+                }
             }
 
             .review-card__text {
                 font-size: 1.4rem;
                 font-weight: 400;
                 text-align: center;
+
+                @include _600 {
+                    font-size: 1.1rem;
+                }
             }
 
             .review-rating {
@@ -78,6 +106,10 @@
                     &.MuiRating-root {
                         color: $green;
                         font-size: 2.5rem;
+
+                        @include _600 {
+                            font-size: 1.7rem;
+                        }
                     }
                 }
             }

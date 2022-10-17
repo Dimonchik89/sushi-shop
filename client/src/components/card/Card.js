@@ -15,7 +15,7 @@ const Card = ({label = null, item, addProduct}) => {
     }
 
     return (
-        <Grid item xl={3} lg={6} md={12}>
+        <Grid item xl={3} lg={6} md={12} className="card__inner">
             <Box
                 className="card"
             >

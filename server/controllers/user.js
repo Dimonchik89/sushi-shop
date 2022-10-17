@@ -37,7 +37,6 @@ const loginUser = async (req, res) => {
 
 const createUser = async (req, res) => {
     const { email, password, role="USER" } = req.body;
-    
     if(!email || !password) {
         return res.status(400).json({ message: "fields are not filled"})
     }
@@ -50,7 +49,7 @@ const createUser = async (req, res) => {
     const cryptPassword = await bcrypt.hash(password, 10);
 
     const user = await sequelize.models.user.create({ email, password: cryptPassword, role })
-    const cart = await sequelize.models.cart.create({ userId: user.id })
+    // const cart = await sequelize.models.cart.create({ userId: user.id })
     const token = createToken(user.id, user.email, user.role)
 
     return res.status(201).json({token})

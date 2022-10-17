@@ -102,6 +102,10 @@
                     @include _834 {
                         font-size: 1.6rem;
                     }
+
+                    @include _600 {
+                        font-size: 1.4rem;
+                    }
                 }
             }
         }
@@ -114,6 +118,10 @@
 
         @include _834 {
             margin-top: 6.5rem;
+        }
+
+        @include _600 {
+            margin-top: 3.5rem;
         }
     }
 }

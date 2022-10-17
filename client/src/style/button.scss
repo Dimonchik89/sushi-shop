@@ -12,6 +12,12 @@
         line-height: 2.1rem;
         font-weight: 700;
         text-transform: lowercase;
+
+        @include _600 {
+            width: 9rem;
+            height: 3.1rem;
+            font-size: 1.6rem;
+        }
     }
 }
 
@@ -26,6 +32,11 @@
         @include _834{
             width: 9.5rem;
             height: 3.6rem;
+        }
+
+        @include _600 {
+            width: 8rem;
+            height: 3rem;
         }
     }
 }
@@ -58,6 +69,12 @@
         color: $dark-black;
         font-size: 2.2rem;
         font-weight: 700;
+
+        @include _600 {
+            width: 17.5rem;
+            height: 4.7rem;
+            font-size: 1.8rem;
+        }
     }
 }
 

@@ -36,7 +36,7 @@ const Special = () => {
                     <Grid 
                         container 
                         // spacing={{xl: 11, lg: 20}}
-                        rowSpacing={{lg: 10}}
+                        rowSpacing={{lg: 10, md: 5, sm: 5}}
                     >
                         {content}
                     </Grid>

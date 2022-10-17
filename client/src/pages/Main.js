@@ -29,12 +29,12 @@ const Main = () => {
             <Footer/>
             <CartModal handleOpen={handleOpen}/>
             <CartStack open={open} handleClose={handleClose}/>
-            <a
+            {/* <a
                 href="http://admin.localhost:3000/login"
                 target="_blank"
             >
                 Admin
-            </a>
+            </a> */}
         </Box>
     )
 }

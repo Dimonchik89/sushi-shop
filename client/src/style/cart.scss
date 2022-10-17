@@ -24,6 +24,13 @@
             top: 8rem;
             right: 2.8rem;
         }
+        
+        @include _600 {
+            width: 10.5rem;
+            height: 5rem;
+            top: 7rem;
+            right: 1.2rem;
+        }
 
         .cart-icon__wrapper {
             padding-right: 1.3rem;
@@ -44,6 +51,11 @@
             .cart__icon {
                 width: 2.8rem;
                 height: 2.8rem;
+
+                @include _600 {
+                    width: 1.9rem;
+                    height: 1.9rem;
+                }
             }
         }
 
@@ -53,6 +65,10 @@
             .cart__text {
                 font-size: 1.8rem;
                 font-weight: 700;
+
+                @include _600 {
+                    font-size: 1.2em;
+                }
             }
         }
     }

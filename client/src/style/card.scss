@@ -25,6 +25,11 @@
         width: 30rem;
         height: 30rem;
         object-fit: contain;
+
+        @include _600 {
+            width: 27rem;
+            height: 27rem;
+        }
     }
 }
 
@@ -42,6 +47,10 @@
         @include _834 {
             font-size: 2rem;
         }
+
+        @include _600 {
+            font-size: 1.8rem;
+        }
     }
 }
 
@@ -50,15 +59,28 @@
 }
 
 .card__text {
-    font-size: 1.4rem;
-    font-weight: 400;
+    
 
     &.MuiTypography-root {
         font-size: 1.4rem;
         font-weight: 400;
+
+        @include _600 {
+            font-size: 1.2rem;
+        }
     }
 }
 
 .card-button__wrapper {
     margin-top: 2.5rem;
+}
+
+.card__inner {
+
+    &.MuiGrid-root {
+
+        @include _480 {
+            margin: 0 auto;
+        }
+    }
 }
