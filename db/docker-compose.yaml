@@ -8,6 +8,6 @@ services:
       POSTGRES_PASSWORD: 123456
     image: postgres:latest
     volumes:
-      - ./:/var/lib/docker/volumes/
+      - ./:/var/lib/postgresql
     ports:
       - 5437:5432
