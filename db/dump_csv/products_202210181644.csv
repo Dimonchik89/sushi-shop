@@ -1,0 +1,35 @@
+"id","name","cost","weight","components","img","categoryId","createdAt","updatedAt"
+1,sashimi plateau,80,1800,"trout, scallops, avocado, tuna, sea bass, lemon mint sauce with basil","[""images/1665735402006""]",1,2022-10-14 11:16:42.666 +0300,2022-10-14 11:16:42.666 +0300
+2,Futomaki & Gunkan Set,60,1750,"futomaki with shrimp, futomaki with mango and salmon, gunkans with masago caviar, gunkans with lobsters","[""images/1665735630696""]",1,2022-10-14 11:20:31.991 +0300,2022-10-14 11:20:31.991 +0300
+3,Nigiri & Maki Mini-Set,60,1300,"shrimp maki, salmon maki, red caviar nigiri, tuna nigiri, salmon nigiri, shrimp nigiri","[""images/1665735703398""]",1,2022-10-14 11:21:43.964 +0300,2022-10-14 11:21:43.964 +0300
+4,Nigiri & Uramaki Set,95,2600,"salmon nigiri, scallop nigiri, tuna nigiri, smoked salmon uramaki, snow crab sesame uramaki","[""images/1665735763394""]",1,2022-10-14 11:22:44.004 +0300,2022-10-14 11:22:44.004 +0300
+5,Ramen with beef,15,360,"ramen, pepper, beef, onion, hot sauce, corn","[""images/1665735863252""]",9,2022-10-14 11:24:24.387 +0300,2022-10-14 11:24:24.387 +0300
+6,Ramen with Tofu,25,320,"ramen, pepper, tofu, onion, sweet sauce, corn, edamame beans, basil, carrot","[""images/1665735903463""]",9,2022-10-14 11:25:04.978 +0300,2022-10-14 11:25:04.978 +0300
+7,Soba with Shrimps,20,420,"soba, pepper, shrimp, onion, sweet sauce, corn, carrot","[""images/1665735945233""]",9,2022-10-14 11:25:47.184 +0300,2022-10-14 11:25:47.184 +0300
+8,Ramen with vegetables,23,350,"ramen, pepper, shrimp, onion, sweet sauce, edamame beans, carrot","[""images/1665735999530""]",9,2022-10-14 11:26:41.632 +0300,2022-10-14 11:26:41.632 +0300
+9,Soba with Egg,20,420,"soba, pepper, shrimp, onion, sweet sauce, corn, carrot","[""images/1665736050842""]",9,2022-10-14 11:27:31.448 +0300,2022-10-14 11:27:31.448 +0300
+10,Soba with Chicken,20,420,"soba, pepper, chicken, onion, sweet sauce, corn, carrot","[""images/1665736097738""]",9,2022-10-14 11:28:18.385 +0300,2022-10-14 11:28:18.385 +0300
+16,Rice with beef,20,400,"rice, beef, onions","[""images/1665738873991""]",5,2022-10-14 12:14:34.809 +0300,2022-10-14 12:14:34.809 +0300
+17,Vegetables rice,15,380,"rice, reas, onions, pepper, carrot, tomato","[""images/1665739002754""]",5,2022-10-14 12:16:43.399 +0300,2022-10-14 12:16:43.399 +0300
+18,Rice with peas,12,360,"rice, reas, onions","[""images/1665739063670""]",5,2022-10-14 12:17:44.272 +0300,2022-10-14 12:17:44.272 +0300
+19,Philadelphia with shrimp,10,320,"Rice, nori, cream cheese, massago caviar, cucumber, tiger shrimp","[""images/1665739938647""]",4,2022-10-14 12:32:19.343 +0300,2022-10-14 12:32:19.343 +0300
+20,Philadelphia,7,280,"Rice, nori, salmon, cream cheese, cucumber","[""images/1665740010637""]",4,2022-10-14 12:33:31.224 +0300,2022-10-14 12:33:31.224 +0300
+21,Osaka,5,225,"Rice, nori, cream cheese, tuna, avocado, sesame seeds, tuna chips","[""images/1665740147552""]",4,2022-10-14 12:35:48.372 +0300,2022-10-14 12:35:48.372 +0300
+22,Bushido,5,265,"Rice, nori, cream cheese, hiashi, squid, teriyaki salmon, mayonnaise, green onion, sesame","[""images/1665740266139""]",4,2022-10-14 12:37:48.349 +0300,2022-10-14 12:37:48.349 +0300
+23,Canada,8,250,"Rice, nori, salmon, avocado, eel, cream cheese, unagi sauce, sesame","[""images/1665740400630""]",4,2022-10-14 12:40:01.323 +0300,2022-10-14 12:40:01.323 +0300
+24,Gunkan Shrimp,2,50,"Rice, nori, mayonnaise, massago caviar, shrimp","[""images/1665741180993""]",8,2022-10-14 12:53:01.771 +0300,2022-10-14 12:53:01.771 +0300
+25,Gunkan Salmon,2,50,"Rice, nori, salmon, hiashi, massago caviar","[""images/1665741362130""]",8,2022-10-14 12:56:04.024 +0300,2022-10-14 12:56:04.024 +0300
+26,Gunkan red caviar,3,50,"Nori, red caviar ","[""images/1665741643881""]",8,2022-10-14 13:00:44.806 +0300,2022-10-14 13:00:44.806 +0300
+27,Maki salmon,3,120,"Rice, nori, salmon","[""images/1665741804567""]",6,2022-10-14 13:03:25.234 +0300,2022-10-14 13:03:25.234 +0300
+28,Maki avocado,2,130,"Rice, nori, avocado","[""images/1665741913037""]",6,2022-10-14 13:05:13.714 +0300,2022-10-14 13:05:13.714 +0300
+29,Maki shrimp,3,120,"Rice, shrimp, massago caviar, nori.","[""images/1665742065631""]",6,2022-10-14 13:07:47.189 +0300,2022-10-14 13:07:47.189 +0300
+30,Maki tuna,2,100,"Rice, nori, tuna","[""images/1665742211270""]",6,2022-10-14 13:10:11.995 +0300,2022-10-14 13:10:11.995 +0300
+31,Tuna uramaki,5,200,"Rice, nori, tuna, avoсado, cheese, sesame","[""images/1665744438709""]",7,2022-10-14 13:47:19.511 +0300,2022-10-14 13:47:19.511 +0300
+32,Salmon uramaki,5,200,"Rice, nori, salmon, dill","[""images/1665744565397""]",7,2022-10-14 13:49:26.063 +0300,2022-10-14 13:49:26.063 +0300
+33,Nigiri Sesame,1,40,"Rice, nori, sesame","[""images/1665745273598""]",2,2022-10-14 14:01:14.210 +0300,2022-10-14 14:01:14.210 +0300
+34,Nigiri Onion,1,40,"Rice, nori, onion","[""images/1665745343893""]",2,2022-10-14 14:02:25.267 +0300,2022-10-14 14:02:25.267 +0300
+11,Salmon,2,40,"rice, salmon","[""images/1665737801213""]",3,2022-10-14 11:56:41.997 +0300,2022-10-14 14:07:10.913 +0300
+12,Unagi,3,45,"rice, nori, unagi","[""images/1665737838713""]",3,2022-10-14 11:57:19.302 +0300,2022-10-14 14:07:23.235 +0300
+13,Tuna,2,40,"rice, tuna","[""images/1665737883146""]",3,2022-10-14 11:58:03.778 +0300,2022-10-14 14:07:57.294 +0300
+14,Fried Shrimp,3,45,"rice, nori, shrimp","[""images/1665738172759""]",3,2022-10-14 12:02:53.344 +0300,2022-10-14 14:08:12.569 +0300
+15,Shrimp,3,45,"rice, shrimp","[""images/1665738197391""]",3,2022-10-14 12:03:18.271 +0300,2022-10-14 14:08:28.420 +0300

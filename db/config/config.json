@@ -1,11 +1,11 @@
 {
   "development": {
-    "username": "kmsmdgaedmlalg",
-    "password": "4d590519e05547acf8535787b1c7be36ab3225d123d12652801c214a6dc831f4",
-    "database": "d3pin7kdkm7c14",
-    "host": "ec2-34-253-119-24.eu-west-1.compute.amazonaws.com",
+    "username": "postgres",
+    "password": "123456",
+    "database": "shop_2",
+    "host": "127.0.0.1",
     "dialect": "postgres",
-    "port": 5432,
+    "port": 5437,
     "define": {
       "timestamps": false
     }
