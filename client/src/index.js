@@ -14,7 +14,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 const theme = createTheme({
   breakpoints: {
     values: {
-      sm: 480,
+      sm: 320,
       md: 600,
       lg: 835,
       xl: 1473,

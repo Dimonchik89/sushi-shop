@@ -15,13 +15,13 @@
         background: $white-dark;
         cursor: pointer;
 
-        position: absolute;
-        top: 3.2rem;
+        position: fixed;
+        top: 17.2rem;
         right: 7rem;
         z-index: 5;
 
         @include _834 {
-            top: 8rem;
+            top: 24rem;
             right: 2.8rem;
         }
         
