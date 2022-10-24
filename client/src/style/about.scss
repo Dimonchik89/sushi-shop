@@ -15,6 +15,7 @@
     .about-container__img {
 
         @include _834 {
+            margin: 0 auto;
             order: 2;
         }
     }
@@ -53,6 +54,10 @@
                     @include _600 {
                         font-size: 2.1rem;
                     }
+
+                    @include _320 {
+                        font-size: 1.8rem;
+                    }
                 }
             }
     
@@ -65,6 +70,10 @@
 
                     @include _600 {
                         font-size: 1.8rem;
+                    }
+
+                    @include _320 {
+                        font-size: 1.6rem;
                     }
                 }
             }

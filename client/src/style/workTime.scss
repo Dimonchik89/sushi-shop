@@ -39,6 +39,10 @@
                     @include _600 {
                         font-size: 2.1rem;
                     }
+
+                    @include _320 {
+                        font-size: 1.8rem;
+                    }
                 }
     
                 .work-time__subtitle {
@@ -48,6 +52,10 @@
                     text-align: center;
 
                     @include _600 {
+                        font-size: 1.6rem;
+                    }
+
+                    @include _320 {
                         font-size: 1.6rem;
                     }
                 }

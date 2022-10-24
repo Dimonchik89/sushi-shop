@@ -38,6 +38,11 @@
             width: 8rem;
             height: 3rem;
         }
+
+        @include _480 {
+            height: 2.4rem;
+            width: 6rem;
+        }
     }
 }
 
@@ -74,6 +79,12 @@
             width: 17.5rem;
             height: 4.7rem;
             font-size: 1.8rem;
+        }
+
+        @include _320 {
+            width: 12.25rem;
+            height: 3.3rem;
+            font-size: 1.4rem;
         }
     }
 }
@@ -147,4 +158,12 @@
 .button-menu__wrapper {
     width: 20%;
     margin-top: 2.2rem;
+
+    @include _480 {
+        width: 24%;
+    }
+
+    @include _320 {
+        width: 33%;
+    }
 }

@@ -28,7 +28,7 @@ const CartModalItem = ({product, addQty, removeQty, removeProduct}) => {
                 </Typography>
             </Box>
             <Box
-                className="d-flex align-items"
+                className="d-flex align-center"
             >
                 <IconButton
                     className="cart-modal__button"

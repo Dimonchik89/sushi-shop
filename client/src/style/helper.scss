@@ -48,6 +48,10 @@
         @include _600 {
             font-size: 2.1rem;
         }
+
+        @include _320 {
+            font-size: 1.8rem;
+        }
     }
 }
 
@@ -60,5 +64,9 @@
 
     @include _834 {
         padding: 0 2.3rem;
+    }
+
+    @include _320 {
+        padding: 0;
     }
 }

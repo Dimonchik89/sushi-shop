@@ -10,6 +10,10 @@
     @include _834 {
         margin: 0 auto 2rem;
     }
+
+    @include _320 {
+        width: 25rem;
+    }
 }
 
 .card-img__wrapper {
@@ -29,6 +33,11 @@
         @include _600 {
             width: 27rem;
             height: 27rem;
+        }
+
+        @include _320 {
+            width: 24rem;
+            height: 24rem;
         }
     }
 }
@@ -51,6 +60,10 @@
         @include _600 {
             font-size: 1.8rem;
         }
+
+        @include _320 {
+            font-size: 1.6rem;
+        }
     }
 }
 
@@ -67,6 +80,10 @@
 
         @include _600 {
             font-size: 1.2rem;
+        }
+
+        @include _320 {
+            font-size: 1.1rem;
         }
     }
 }

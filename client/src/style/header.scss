@@ -113,6 +113,11 @@
                 width: 1.3rem;
                 height: 1.3rem;
             }
+
+            @include _320 {
+                width: 1rem;
+                height: 1rem;
+            }
         }
 
         .header-contact__text {
@@ -123,6 +128,10 @@
 
                 @include _600 {
                     font-size: 1.2rem;
+                }
+
+                @include _320 {
+                    font-size: 1rem;
                 }
             }
         }
@@ -193,6 +202,10 @@
             @include _480 {
                 font-size: 1.4rem;
             }
+
+            @include _320 {
+                font-size: 1.2rem;
+            }
         }
 
     }
@@ -213,6 +226,10 @@
 
             @include _480 {
                 font-size: 1rem;
+            }
+
+            @include _320 {
+                font-size: .9rem;
             }
         }
     }
