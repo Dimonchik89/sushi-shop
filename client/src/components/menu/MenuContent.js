@@ -14,11 +14,11 @@ import "../../style/menu.scss";
 const MenuContent = ({activeMenu}) => {
     const [ searchParams, setSearchParams ] = useSearchParams();
 
-    const { data, error, isLoading } = useGetProductQuery(searchParams.get("categoryId") ? searchParams.get("categoryId") : activeMenu);
+    const { data, error, isLoading } = useGetProductQuery(searchParams.get("categoryid") ? searchParams.get("categoryid") : activeMenu);
 
     useEffect(() => {
         // console.log(searchParams.get("categoryId"));
-    }, [searchParams.get("categoryId")])
+    }, [searchParams.get("categoryid")])
     
     if(isLoading) {
         return <Spinner/>

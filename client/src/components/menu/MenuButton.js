@@ -20,7 +20,7 @@ const MenuButton = ({item, changeActiveMenu, activeMenu}) => {
             <Button
                 className={buttonStyle}
                 onClick={() => {
-                    navigate(`?categoryId=${item.id}`);
+                    navigate(`?categoryid=${item.id}`);
                     changeActiveMenu(item.id)
                 }}
             >

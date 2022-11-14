@@ -22,8 +22,8 @@ const Menu = ({changeActiveMenu}) => {
     const { data, error, isLoading } = useGetCategoryQuery()
 
     useEffect(() => {
-        changeActiveMenu(+searchParams.get("categoryId") || 2)
-    }, [searchParams.get("categoryId")])
+        changeActiveMenu(+searchParams.get("categoryid") || 2)
+    }, [searchParams.get("categoryid")])
 
     if(error) {
         return <Error/>

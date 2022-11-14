@@ -1,4 +1,4 @@
-const { sequelize } = require("../../db/models/index");
+const { sequelize } = require("../db/models/index");
 
 const getAllTypes = async (req, res) => {
     const types = await sequelize.models.type.findAll();

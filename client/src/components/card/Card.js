@@ -24,12 +24,11 @@ const Card = ({label = null, item, addProduct}) => {
                 >
                     <img 
                         className="card__img"
-                        src={`${process.env.REACT_APP_IMAGE_PATH}${image}`} 
+                        src={`${process.env.REACT_APP_IMAGE_PATH}${image}.png`} 
                         alt="photo"
                     />
                     {label}
                 </Box>
-
                 <Box
                     className="card-info"
                 >

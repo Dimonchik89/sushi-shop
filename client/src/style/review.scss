@@ -30,13 +30,13 @@
             font-size: 2.2rem;
             font-weight: 800;
 
-        @include _600 {
-            font-size: 2.1rem;
-        }
+            @include _600 {
+                font-size: 2.1rem;
+            }
 
-        @include _320 {
-            font-size: 1.8rem;
-        }
+            @include _320 {
+                font-size: 1.8rem;
+            }
         }
     }
 
@@ -50,6 +50,10 @@
             @include _600 {
                 font-size: 1.6rem;
                 line-height: 2.2rem;
+            }
+
+            @include _320 {
+                font-size: 1.2rem;
             }
         }
     }

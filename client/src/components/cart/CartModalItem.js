@@ -16,7 +16,7 @@ const CartModalItem = ({product, addQty, removeQty, removeProduct}) => {
             <Box>
                 <img 
                     className="cart-modal__img"
-                    src={`${process.env.REACT_APP_IMAGE_PATH}${JSON.parse(product.img)[0]}`} 
+                    src={`${process.env.REACT_APP_IMAGE_PATH}${JSON.parse(product.img)[0]}.png`} 
                     alt="image"
                 />
             </Box>

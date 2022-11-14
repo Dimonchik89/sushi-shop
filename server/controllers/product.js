@@ -1,16 +1,17 @@
-const { sequelize } = require("../../db/models/index");
+const { sequelize } = require("../db/models/index");
 const path = require("path");
 const { v4: uuidv4 } = require('uuid');
 
 const getAllProduct = async (req, res) => {
+    
     let { limit, page, ...tail } = req.query
-    if(Object.keys(tail)[0] === "categoryId") {
+    if(Object?.keys(tail)[0] === "categoryid") {
         const obj = {};
         for(let key in tail) {
             obj[key] = +tail[key].split(",")
         }
+        console.log("findobj=================", obj);
         const products = await sequelize.models.product.findAndCountAll({ where: obj });
-
         return res.status(200).json(products)
     } else {
         const products = await sequelize.models.product.findAndCountAll()

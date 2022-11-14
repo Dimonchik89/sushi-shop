@@ -1,4 +1,4 @@
-const { sequelize } = require("../../db/models/index");
+const { sequelize } = require("../db/models/index");
 
 // const getAllSpecial = async (req, res) => {
 //     let {limit, page} = req.query;

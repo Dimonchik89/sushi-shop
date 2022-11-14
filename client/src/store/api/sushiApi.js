@@ -20,7 +20,7 @@ const sushiApi = createApi({
             query: (params) => ({
                 url: "/product",
                 params: {
-                    categoryId: params
+                    categoryid: params
                 }
             })
         }),

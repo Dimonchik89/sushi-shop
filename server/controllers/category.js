@@ -1,4 +1,4 @@
-const { sequelize } = require("../../db/models/index");
+const { sequelize } = require("../db/models/index");
 
 const getAllCategory = async (req, res) => {
     const category = await sequelize.models.category.findAll();

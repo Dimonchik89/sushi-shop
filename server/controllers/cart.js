@@ -1,4 +1,4 @@
-const { sequelize } = require("../../db/models/index");
+const { sequelize } = require("../db/models/index");
 const sendMail = require("../mail/sendMail");
 
 const addProductToCart = async (req, res) => {

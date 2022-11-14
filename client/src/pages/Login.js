@@ -26,7 +26,8 @@ const Login = () => {
     const submit = async (e) => {
         e.preventDefault();
         const data = await loginUser({email, password})
-        const token = data.data.token;
+        console.log(data);
+        const token = await data.data.token;
         localStorage.setItem("token", token);
             if(data.data) {
                 navigate("/admin")
